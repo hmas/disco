@@ -169,6 +169,9 @@ class NonBlockingInput(object):
                 return time.time() - started
         raise IOError("Reading timed out after {0} seconds".format(self.timeout))
 
+    def close():
+        pass
+
     def t_read(self, nbytes, spent=0, bytes=''):
         while True:
             spent += self.select(spent)

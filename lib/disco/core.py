@@ -331,7 +331,7 @@ class Disco(object):
             raise JobError(Job(name=jobname, master=self), "Timeout")
         raise Continue()
 
-    def wait(self, jobname, poll_interval=2, timeout=None, clean=False, show=None):
+    def wait(self, jobname, poll_interval=20, timeout=None, clean=False, show=None):
         """
         Block until the job has finished.
         Returns a list of the result urls.
